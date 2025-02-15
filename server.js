@@ -72,12 +72,13 @@ app.post('/api/book', (req, res) => {
 });
 
 const corsOptions = {
-  origin: '*', // specify the frontend URL here
-  methods: ['GET', 'POST'], // specify allowed methods
-  allowedHeaders: ['Content-Type'], // specify allowed headers
+  origin: '*', // Allow all origins
+  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allow common HTTP methods
+  allowedHeaders: ['Content-Type', 'Authorization'], // Allow headers
 };
 
 app.use(cors(corsOptions));
+
 
 // Reset all bookings
 app.post('/api/reset', (req, res) => {
