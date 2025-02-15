@@ -71,6 +71,13 @@ app.post('/api/book', (req, res) => {
   res.json({ message: 'Rooms booked', rooms: bestSelection });
 });
 
+const corsOptions = {
+  origin: '*', // specify the frontend URL here
+  methods: ['GET', 'POST'], // specify allowed methods
+  allowedHeaders: ['Content-Type'], // specify allowed headers
+};
+
+app.use(cors(corsOptions));
 
 // Reset all bookings
 app.post('/api/reset', (req, res) => {
