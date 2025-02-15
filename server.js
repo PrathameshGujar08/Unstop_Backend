@@ -30,6 +30,10 @@ const initializeRooms = () => {
 // Initialize rooms array
 initializeRooms();
 
+app.get('/', (req, res) => {
+  res.send('Hotel Booking API');
+})
+
 // Get all rooms
 app.get('/api/rooms', (req, res) => {
   res.json(rooms);
