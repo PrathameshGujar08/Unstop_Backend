@@ -83,8 +83,6 @@ app.post('/api/book', (req, res) => {
   res.json({ message: 'Rooms booked', rooms: bestSelection });
 });
 
-
-
 // Reset all bookings
 app.post('/api/reset', (req, res) => {
   rooms.forEach(room => (room.isBooked = false));
@@ -101,3 +99,5 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
+
+module.exports = app;
