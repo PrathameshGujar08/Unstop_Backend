@@ -44,3 +44,4 @@ Thumbs.db
 # Optional: Exclude lock files (if not using them)
 # package-lock.json
 # yarn.lock
+.vercel
